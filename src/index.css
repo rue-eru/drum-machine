@@ -1,0 +1,154 @@
+:root {
+  /*colors*/
+  --key-border: #0d1b2a;
+  --key-background: #1b263b;
+  --key-color: #e0e1dd;
+  --controller-background: #778da9;
+  --darker-gray: #415a77;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  width: 50%;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(164, 180, 194);
+  min-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drum-pad,
+#bank-btn,
+#power-btn,
+#group-sound-name {
+  border: solid var(--key-border) 1px;
+  border-radius: 5px;
+  color: var(--key-color);
+  background-color: var(--key-background);
+}
+
+.drum-pad,
+#bank-btn,
+#power-btn {
+  box-shadow: 5px 4px 3px 3px #041e26;
+}
+
+.drum-pad {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+}
+
+.drum-kit {
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+}
+
+.volumeController {
+  display: block;
+  margin: 25px 10px;
+  width: 300px;
+}
+
+#bank-btn,
+#power-btn {
+  height: 50px;
+  width: 80px;
+  text-wrap: nowrap;
+}
+
+#connection {
+  font-style: italic;
+  color: var(--key-color);
+  opacity: 0.6;
+}
+
+#group-sound-name {
+  padding: 1.35rem 0;
+}
+
+#volume-header {
+  font-weight: 600;
+  color: var(--key-background);
+}
+
+/*Range Input Styling*/
+/*Range Reset*/
+input[type="range"] {
+  -webkit-appearance: none;
+   appearance: none;
+   background: transparent;
+   cursor: pointer;
+   width: 100%;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+ outline: none;
+}
+
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--key-background);
+  border-radius: 0.5rem;
+  height: 0.35rem;  
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+
+  /*custom styles*/
+  background-color: var(--key-color);
+  height: 2rem;
+  width: 1rem;
+  border-radius: 0.3rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {   
+ border: 1px solid var(--key-background);
+ outline: 3px solid var(--darker-gray);
+ outline-offset: 0.1rem; 
+}
+
+#display{
+  display: inline-flex;
+  background-color: var(--controller-background);
+  margin: 10px;
+  gap: 50px;
+}
+
+#drum-machine {
+  background-color: var(--controller-background);
+  padding: 2rem;
+  border: var(--key-border) solid 3.5px;
+  border-radius: 10px;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+a {
+  color: var(--key-background);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--key-background);
+}
