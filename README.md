@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Drum Machine
 **Live Demo:** [https://rue-eru.github.io/drum-machine](https://rue-eru.github.io/drum-machine)
 
@@ -13,3 +14,7 @@ All objectives and instructions for the project can be found here:
 - **Frontend:** React, Vite, CSS
 - **Build Tool:** Vite
 - **Deployment:** GitHub Pages
+=======
+# drum-machine
+FCC Drum Machine
+>>>>>>> a7cfe08967f35ef8afaee5d2efd6314b03aa4563
